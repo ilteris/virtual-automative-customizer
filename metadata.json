@@ -1,0 +1,5 @@
+{
+  "name": "Virtual Automotive Customizer",
+  "description": "An application that uses Gemini to realistically edit car images. Users can upload a photo of their car, add new parts, and provide text instructions to visualize modifications.",
+  "requestFramePermissions": []
+}
