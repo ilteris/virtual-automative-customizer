@@ -4,7 +4,11 @@ let ai: GoogleGenAI | null = null;
 
 const getAiClient = (): GoogleGenAI => {
   if (!ai) {
-    ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const apiKey = import.meta.env.VITE_API_KEY;
+    if (!apiKey) {
+      throw new Error("VITE_API_KEY is not set. Please add it to your .env file.");
+    }
+    ai = new GoogleGenAI({ apiKey });
   }
   return ai;
 };
